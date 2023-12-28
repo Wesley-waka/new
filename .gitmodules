@@ -1,0 +1,3 @@
+[submodule "server"]
+	path = server
+	url = git@github.com:Wesley-waka/new_back.git
