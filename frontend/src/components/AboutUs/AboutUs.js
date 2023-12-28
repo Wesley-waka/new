@@ -50,7 +50,7 @@ function AboutUs() {
       <div className='about-departments-main-container'>
         <div className='about-departments-container'>
           <div className='about-department-card'>
-            <i class='fa-solid fa-hands-holding-child'></i>
+            <i className='fa-solid fa-hands-holding-child'></i>
             <section className='about-department-card-txt'>
               <h3>Pediatrics</h3>
               <p>
@@ -60,7 +60,7 @@ function AboutUs() {
             </section>
           </div>
           <div className='about-department-card'>
-            <i class='fa-solid fa-hands-holding-child'></i>
+            <i className='fa-solid fa-hands-holding-child'></i>
             <section className='about-department-card-txt'>
               <h3>Neurology</h3>
               <p>
@@ -70,7 +70,7 @@ function AboutUs() {
             </section>
           </div>{' '}
           <div className='about-department-card'>
-            <i class='fa-solid fa-hand-holding-droplet'></i>
+            <i className='fa-solid fa-hand-holding-droplet'></i>
             <section className='about-department-card-txt'>
               <h3>Haematology</h3>
               <p>
@@ -80,7 +80,7 @@ function AboutUs() {
             </section>
           </div>{' '}
           <div className='about-department-card'>
-            <i class='fa-solid fa-heart-pulse'></i>
+            <i className='fa-solid fa-heart-pulse'></i>
             <section className='about-department-card-txt'>
               <h3>Cardiology</h3>
               <p>
@@ -90,7 +90,7 @@ function AboutUs() {
             </section>
           </div>{' '}
           <div className='about-department-card'>
-            <i class='fa-solid fa-lungs'></i>
+            <i className='fa-solid fa-lungs'></i>
             <section className='about-department-card-txt'>
               <h3>X-Ray Diagnostic</h3>
               <p>
@@ -100,7 +100,7 @@ function AboutUs() {
             </section>
           </div>{' '}
           <div className='about-department-card'>
-            <i class='fa-solid fa-user-doctor'></i>
+            <i className='fa-solid fa-user-doctor'></i>
             <section className='about-department-card-txt'>
               <h3>Consultation</h3>
               <p>
@@ -110,7 +110,7 @@ function AboutUs() {
             </section>
           </div>{' '}
           <div className='about-department-card'>
-            <i class='fa-solid fa-microscope'></i>
+            <i className='fa-solid fa-microscope'></i>
             <section className='about-department-card-txt'>
               <h3>Laboratory Services</h3>
               <p>
@@ -120,7 +120,7 @@ function AboutUs() {
             </section>
           </div>{' '}
           <div className='about-department-card'>
-            <i class='fa-solid fa-truck-medical'></i>
+            <i className='fa-solid fa-truck-medical'></i>
             <section className='about-department-card-txt'>
               <h3>Emergency Services</h3>
               <p>
@@ -202,7 +202,7 @@ function AboutUs() {
           {/* {practitioners ? practitioners.map((prac) => { */}
           {practitionerProfilesFromFile ? practitionerProfilesFromFile.map((prac) => {
             return (
-              <div className='team-card'>
+              <div className='team-card' key={prac.id}>
                 <img
                   src={prac.image}
                   alt='Image by <a href="https://www.freepik.com/free-photo/front-view-nurse-wearing-stethoscope_32486202.htm#page=2&query=black%20woman%20doctor&position=7&from_view=keyword">Freepik</a>'
