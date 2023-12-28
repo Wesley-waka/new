@@ -129,12 +129,12 @@ const AllProducts = ({ loggedIn, userType }) => {
                     className='btn btn-primary m-2'
                     to={`/admin/product/edit/${product.id}`}
                   >
-                    <i class='fa fa-pencil' aria-hidden='true'></i>
+                    <i className='fa fa-pencil' aria-hidden='true'></i>
                   </Link>
                 </td>
                 <td id='centered-cell'>
                   <i
-                    class='fa fa-trash'
+                    className='fa fa-trash'
                     aria-hidden='true'
                     id='td-delete-icon'
                     onClick={() => handleDeleteProduct(product)}

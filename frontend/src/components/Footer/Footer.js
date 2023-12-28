@@ -1,4 +1,3 @@
-import React from 'react';
 import './Footer.css';
 import { NavLink } from 'react-router-dom';
 import logo from '../../img/logo.png';
@@ -6,16 +5,16 @@ import logo from '../../img/logo.png';
 function Footer() {
   return (
     <footer>
-      <div class='footercontainer'>
-        <div class='footer1'>
-          <div class='newslettertext'>
+      <div className='footercontainer'>
+        <div className='footer1'>
+          <div className='newslettertext'>
             <h2>Stay up to date</h2>
             <p>
               Subscribe to our newsletter to receive update and learn more about
               NewLife Hospital.
             </p>
           </div>
-          <form class='newsletter'>
+          <form className='newsletter'>
             <input
               id='news-email'
               placeholder='Enter your email address'
@@ -26,7 +25,7 @@ function Footer() {
           </form>
         </div>
         <div className='footer-2-container'>
-          <div class='footer2'>
+          <div className='footer2'>
             <div id='section1'>
               <NavLink to='/'>
                 <div className='logo-footer'>

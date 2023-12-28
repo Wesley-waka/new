@@ -55,28 +55,28 @@ const AllPractitioners = ({ loggedIn, userType }) => {
           </div>
 
           <div className='card'>
-            <div class='card-inner'>
-              <p class='text-primary'>ORDERS TO BE COMPLETED</p>
+            <div className='card-inner'>
+              <p className='text-primary'>ORDERS TO BE COMPLETED</p>
             </div>
-            <span class='text-primary font-weight-bold'>3</span>
+            <span className='text-primary font-weight-bold'>3</span>
           </div>
 
-          <div class='card'>
-            <div class='card-inner'>
-              <p class='text-primary'>AVAILABLE APPOINTMENTS</p>
+          <div className='card'>
+            <div className='card-inner'>
+              <p className='text-primary'>AVAILABLE APPOINTMENTS</p>
             </div>
-            <span class='text-primary font-weight-bold'>9</span>
+            <span className='text-primary font-weight-bold'>9</span>
           </div>
 
-          <div class='card'>
-            <div class='card-inner'>
-              <p class='text-primary'>AVAILABLE PRACTITIONERS</p>
+          <div className='card'>
+            <div className='card-inner'>
+              <p className='text-primary'>AVAILABLE PRACTITIONERS</p>
             </div>
-            <span class='text-primary font-weight-bold'>{pracs.length}</span>
+            <span className='text-primary font-weight-bold'>{pracs.length}</span>
           </div>
           <div></div>
         </div>
-        <div class='charts'>
+        <div className='charts'>
           <div>
             <div className='chart-title'>
               Number of patients joining NewLife Hospital monthly (as of 2022)

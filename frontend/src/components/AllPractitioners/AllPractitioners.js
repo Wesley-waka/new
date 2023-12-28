@@ -134,12 +134,12 @@ const AllPractitioners = ({ loggedIn, userType }) => {
                     className='btn btn-primary m-2'
                     to={`/admin/practitioner/edit/${user.id}`}
                   >
-                    <i class='fa fa-pencil' aria-hidden='true'></i>
+                    <i className='fa fa-pencil' aria-hidden='true'></i>
                   </Link>
                 </td>
                 <td id='centered-cell'>
                   <i
-                    class='fa fa-trash'
+                    className='fa fa-trash'
                     aria-hidden='true'
                     id='td-delete-icon'
                     onClick={() => handleDeletePractitioner(user)}

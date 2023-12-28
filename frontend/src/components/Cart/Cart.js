@@ -248,7 +248,7 @@ function Cart({
                     </p>
                   </section>
                   <i
-                    class='fa-regular fa-circle-xmark'
+                    className='fa-regular fa-circle-xmark'
                     onClick={() => handleRemoveFromCart(product)}
                   ></i>
                 </div>

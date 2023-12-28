@@ -9,7 +9,7 @@ function PageNotFound() {
         <h1>Page Not Found</h1>
         <br />
         <Link to="/">
-          Return <i class='fa-solid fa-house'></i> 
+          Return <i className='fa-solid fa-house'></i> 
         </Link>
       </div>
     </div>
