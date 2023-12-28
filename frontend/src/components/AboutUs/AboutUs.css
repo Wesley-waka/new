@@ -1,0 +1,441 @@
+/* ==== ABOUT COMPONENT ==== */
+/* == TITLE BANNER == */
+.about-main-container {
+  width: 100%;
+}
+.about-title-banner {
+  background-image: url('../../img/black_doc.jpg'),
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  background-blend-mode: overlay;
+  height: 700px;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: cover;
+  zoom: 60%;
+  font-size: 150px;
+  color: white;
+  display: flex;
+  align-items: center;
+  text-shadow: 1px 1px 2px black;
+  font-weight: 700;
+  padding-left: 400px;
+}
+/* == TITLE BANNER == */
+/* == FLOATING BANNER == */
+.about-floating-banner {
+  width: 85%;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  margin: -30px auto 0 auto;
+  background-color: white;
+  border-radius: 10px;
+  justify-content: space-evenly;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.about-floating-banner-cell {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+}
+.about-hr {
+  border: none;
+  border-left: 1px dashed lightgray;
+  height: 150px;
+  width: 1px;
+}
+.about-floating-banner-cell h4 {
+  color: #00a3c8;
+  padding-bottom: 10px;
+}
+.about-floating-banner-cell h2 {
+  color: #1d3e68;
+  padding-bottom: 10px;
+}
+.about-floating-banner-cell p {
+  color: #6b6b6b;
+  font-weight: 300;
+}
+/* == FLOATING BANNER == */
+/* == DEPARTMENTS == */
+#department-title {
+  color: #1d3e68;
+  text-align: center;
+  margin: 120px auto 50px;
+  font-size: 36px;
+}
+.about-departments-main-container {
+  width: 78%;
+  display: flex;
+  align-items: center;
+  margin: auto;
+  justify-content: space-between;
+}
+.about-departments-container {
+  display: flex;
+  flex-direction: row;
+  width: 70%;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.about-department-card {
+  display: flex;
+  width: 48%;
+  height: 130px;
+  align-items: center;
+  background-color: #f8f9fb;
+  margin: 10px 0;
+  border-radius: 6px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.about-department-card i {
+  zoom: 3;
+  padding: 0 10px;
+  color: #00a3c8;
+}
+.about-department-card-txt {
+  padding: 10px;
+}
+.about-department-card-txt h3 {
+  color: #1d3e68;
+  padding-bottom: 4px;
+}
+.about-department-card-txt p {
+  color: #6b6b6b;
+  font-size: 14px;
+}
+.about-working {
+  background-color: #00a3c8;
+  color: white;
+  width: 25%;
+  padding: 40px;
+  border-radius: 10px;
+}
+.weekdays {
+  font-weight: 600;
+}
+.about-working > p > span {
+  font-weight: 300;
+}
+/* == DEPARTMENTS == */
+/* == ABOUT BEST PRACTICES == */
+.about-practices-container {
+  width: 80%;
+  height: 600px;
+  display: flex;
+  margin: 130px auto 150px auto;
+  justify-content: space-between;
+  align-items: center;
+  height: 700px;
+}
+.about-practices {
+  width: 45%;
+}
+.about-practices p {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 500;
+  padding-top: 10px;
+}
+.about-practices h1 {
+  font-size: 40px;
+}
+.about-practices button {
+  background-color: #1d3e68;
+  border: #1d3e68 1px solid;
+  color: white;
+  padding: 6px 12px;
+  font-size: 20px;
+}
+.about-practices button:hover {
+  cursor: pointer;
+  background-color: white;
+  color: #1d3e68;
+  transition: all 0.35s ease-in-out;
+}
+.about-practices-container img {
+  width: 600px;
+  margin-right: 100px;
+}
+/* == ABOUT BEST PRACTICES == */
+/* == OUR TEAM == */
+.team-main-container {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+}
+.team-main-container h1 {
+  font-size: 40px;
+  color: #1d3e68;
+}
+.team-container {
+  padding: 35px 0;
+  width: 90%;
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  justify-content: space-between;
+}
+.team-card {
+  width: 100%;
+  background-color: #f8f9fb;
+  margin: 30px 0 50px;
+  padding: 40px;
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.team-card img {
+  width: 100%;
+  height: 31vh;
+  padding-bottom: 20px;
+  border-radius: 50%;
+  /* border: 1px dashed red; */
+}
+.team-card h2 {
+  width: 100%;
+  height: 90px;
+  color: #1d3e68;
+  font-size: 28px;
+  padding-bottom: 10px;
+}
+.team-card p {
+  font-size: 20px;
+}
+/* == OUR TEAM == */
+
+/* == MEDIA QUERIES */
+@media screen and (max-width: 769px) {
+  .about-title-banner {
+    height: 400px;
+    font-size: 65px;
+    padding-left: 30px;
+  }
+  /* == FLOATING BANNER == */
+  .about-floating-banner {
+    width: 85%;
+    height: auto;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .about-floating-banner-cell {
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 4px;
+    margin: 6px 0;
+  }
+  .about-hr {
+    border: none;
+    border-bottom: 1px dashed lightgray;
+    height: 1px;
+    width: 85%;
+    /* border: thin dashed blue; */
+  }
+  .about-floating-banner-cell h4 {
+    font-size: 14px;
+    padding: 10px 0;
+  }
+  .about-floating-banner-cell h2 {
+    font-size: 18px;
+    padding-bottom: 10px;
+  }
+  .about-floating-banner-cell p {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  /* == FLOATING BANNER == */
+  /* == DEPARTMENTS == */
+  #department-title {
+    margin: 100px auto 50px;
+    font-size: 30px;
+  }
+  .about-departments-main-container {
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .about-departments-container {
+    width: 100%;
+  }
+  .about-department-card {
+    width: 100%;
+    height: 80px;
+    margin: 8px 0;
+  }
+  .about-department-card i {
+    zoom: 1.7;
+    padding: 0 4px;
+  }
+  .about-department-card-txt {
+    padding: 4px 4px 4px 10px;
+  }
+  .about-department-card-txt h3 {
+    font-size: 16px;
+  }
+  .about-department-card-txt p {
+    color: #6b6b6b;
+    font-size: 12px;
+  }
+  .about-working {
+    width: 100%;
+    padding: 25px;
+    border-radius: 10px;
+    margin-top: 20px;
+  }
+  .about-working > p {
+    font-size: 14px;
+  }
+  /* == DEPARTMENTS == */
+  /* == ABOUT BEST PRACTICES == */
+  .about-practices-container {
+    width: 85%;
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 90px auto;
+    justify-content: space-between;
+    height: fit-content;
+  }
+  .about-practices {
+    width: 100%;
+  }
+  .about-practices p {
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .about-practices h3 {
+    color: #1d3e68;
+  }
+  .about-practices h1 {
+    font-size: 20px;
+    margin: -12px 0;
+  }
+  .about-practices button {
+    font-size: 16px;
+    display: flex;
+    margin: auto;
+  }
+  .about-practices-container img {
+    width: 70%;
+    display: flex;
+    margin: 0 auto 20px;
+  }
+  /* == ABOUT BEST PRACTICES == */
+  /* == OUR TEAM == */
+  .team-main-container {
+    width: 85%;
+  }
+  .team-main-container h1 {
+    font-size: 30px;
+  }
+  .team-container {
+    padding: 10px 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 48% 48%;
+    justify-content: space-between;
+  }
+  .team-card {
+    width: 100%;
+    margin: 20px 0;
+    padding: 15px;
+  }
+  .team-card img {
+    height: 18vh;
+    padding-bottom: 10px;
+  }
+  .team-card h2 {
+    width: 100%;
+    height: 60px;
+    font-size: 20px;
+    padding-bottom: 10px;
+  }
+  .team-card p {
+    font-size: 14px;
+  }
+  /* == OUR TEAM == */
+}
+@media screen and (min-width: 769px) and (max-width: 1366px) {
+  /* == TITLE BANNER == */
+  .about-title-banner {
+    height: 70vh;
+    font-size: 6rem;
+    padding-left: 7.5%;
+  }
+  /* == TITLE BANNER == */
+  /* == FLOATING BANNER == */
+  .about-floating-banner-cell h4 {
+    font-size: 1rem;
+  }
+  .about-floating-banner-cell h2 {
+    font-size: 0.9rem;
+  }
+  .about-floating-banner-cell p {
+    font-size: 0.9rem;
+  }
+  /* == FLOATING BANNER == */
+  /* == DEPARTMENTS == */
+  .about-departments-main-container {
+    width: 85%;
+    align-items: start;
+  }
+  .about-departments-container {
+    width: 70%;
+  }
+  .about-department-card {
+    width: 48%;
+    height: fit-content;
+  }
+  .about-department-card i {
+    zoom: 2;
+  }
+  .about-department-card-txt h3 {
+    font-size: 1rem;
+  }
+  .about-department-card-txt p {
+    font-size: 0.8rem;
+  }
+  .about-working {
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+  .weekdays {
+    font-weight: 600;
+  }
+  .about-working > p > span {
+    font-weight: 300;
+  }
+  /* == DEPARTMENTS == */
+  .about-practices-container {
+    display: flex;
+    justify-content: space-between;
+    height: 110vh;
+  }
+  .about-practices-container img {
+    width: 40%;
+    margin-right: 0;
+  }
+  .about-practices {
+    width: 55%;
+  }
+  .about-practices p {
+    font-size: 0.9rem;
+    line-height: 1.6em;
+    font-weight: 500;
+    padding-top: 2px;
+  }
+  .about-practices h1 {
+    font-size: 1.5rem;
+  }
+  .about-practices button {
+    font-size: 0.9rem;
+  }
+  /* == ABOUT BEST PRACTICES == */
+
+}
+/* == MEDIA QUERIES */
+/* ==== ABOUT COMPONENT ==== */
