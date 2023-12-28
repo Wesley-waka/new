@@ -1,11 +1,18 @@
 import './App.css'
-import { Switch, Route,Router,BrowserRouter } from 'react-router-dom';
+import { Switch, Route} from 'react-router-dom';
 import AboutUs from './components/AboutUs/AboutUs';
 import NavBar from './components/Navbar/NavBar';
+import { useState } from 'react';
 
 
 function App() {
+  const [loggedIn, setLoggedIn] = useState(!!localStorage.getItem('loggedIn'));
+  const [userType, setUserType] = useState(localStorage.getItem('userType'));
+  const [cartItems, setCartItems] = useState(
+    JSON.parse(localStorage.getItem("cartItems") || false) || []
+  )
 
+  
   return (
     <div className='App'>
       <NavBar
