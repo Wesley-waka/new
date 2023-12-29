@@ -3,7 +3,6 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import {  useNavigate, useParams } from "react-router-dom";
 import './EditPractitioner.css';
-import {URL as url} from '../../constants';
 
 const EditPractitioner = () => {
   let history = useNavigate();
@@ -27,7 +26,7 @@ const EditPractitioner = () => {
 
   const onSubmit = async e => {
     e.preventDefault();
-    await axios.put(`${url}/users/${id}`, user);
+    await axios.put(`${process.env.url}/users/${id}`, user);
     history("/admin");
   };
 

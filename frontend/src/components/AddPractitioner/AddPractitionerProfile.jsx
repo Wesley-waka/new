@@ -1,7 +1,6 @@
 import  { useState, useEffect } from 'react';
 import AdminSidebar from '../AdminSidebar/AdminSidebar';
 import './AddPractitioner.css';
-import {URL as url} from '../../constants';
 
 function AddPractitionerProfile() {
   const [fName, setFName] = useState('');
@@ -27,13 +26,13 @@ function AddPractitionerProfile() {
 
   // Fetch selected practitioner's profile
   useEffect(() => {
-    fetch(`${url}/practitioners`, {
+    fetch(`${process.env.url}/practitioners`, {
       headers: { Authorization: token },
     })
       .then((r) => r.json())
       .then((d) => setPractitioners(d));
 
-    fetch(`${url}/practitioners/${practitionerID}`, {
+    fetch(`${process.env.url}/practitioners/${practitionerID}`, {
       headers: { Authorization: token },
     })
       .then((r) => r.json())
@@ -44,7 +43,7 @@ function AddPractitionerProfile() {
   // Handles Practitioner Profile data
   const handleFillProfileDetails = (e) => {
     e.preventDefault()
-    fetch(`${url}/practitioner_profiles`, {
+    fetch(`${process.env.url}/practitioner_profiles`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', Authorization: token },
       body: JSON.stringify({

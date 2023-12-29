@@ -4,14 +4,13 @@ import { Link } from 'react-router-dom';
 import AboutPracImg from '../../img/black-male-doc-with-tab.png';
 import teamImg1 from '../../img/front-view-nurse-wearing-stethoscope.jpg';
 import practitionerProfilesFromFile from '../../assets/PractitionerProfileData'
-import {URL as url} from '../../constants';
 
 function AboutUs() {
   const [practitioners, setPractitioners] = useState([]);
   // console.log(practitioners);
 
   useEffect(() => {
-    fetch(`${url}/practitioner_profiles`)
+    fetch(`${process.env.url}/practitioner_profiles`)
       .then((response) => response.json())
       .then((d) => setPractitioners(d));
   }, []);

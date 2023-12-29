@@ -3,7 +3,6 @@ import {  useNavigate } from 'react-router-dom';
 import AdminSidebar from '../AdminSidebar/AdminSidebar';
 import CovidLineGraph from './Graph';
 import './Admin.css';
-import {URL as url} from '../../constants';
 
 // function Admin () {
 const AllPractitioners = ({ loggedIn, userType }) => {
@@ -30,11 +29,11 @@ const AllPractitioners = ({ loggedIn, userType }) => {
 
   // Fetches all practitioners & Products
   useEffect(() => {
-    fetch(`${url}/practitioner_profiles`)
+    fetch(`${process.env.url}/practitioner_profiles`)
       .then((r) => r.json())
       .then((d) => setPracs(d));
 
-    fetch(`${url}/products`)
+    fetch(`${process.env.url}/products`)
       .then((r) => r.json())
       .then((d) => setProducts(d));
   }, []);

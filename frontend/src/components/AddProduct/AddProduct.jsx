@@ -3,7 +3,6 @@ import axios from 'axios';
 import {  useNavigate } from 'react-router-dom';
 import AdminSidebar from '../AdminSidebar/AdminSidebar';
 import './AddProduct.css';
-import {URL as url} from '../../constants';
 
 const AddProduct = ({ uniqueCategoryArray }) => {
   let history = useNavigate();
@@ -18,7 +17,7 @@ const AddProduct = ({ uniqueCategoryArray }) => {
 
   // Storing all categories in array
   useEffect(() => {
-    fetch(`${url}/products`)
+    fetch(`${process.env.url}/products`)
       .then((res) => res.json())
       .then((data) => {
         data.map((d) => categories.push(d.category));
@@ -34,7 +33,7 @@ const AddProduct = ({ uniqueCategoryArray }) => {
 
   const handleAddProduct = (e) => {
     e.preventDefault();
-    fetch(`${url}/admins/${adminId}/products`, {
+    fetch(`${process.env.url}/admins/${adminId}/products`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', Authorization: token },
       body: JSON.stringify({

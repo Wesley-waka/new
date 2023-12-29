@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import {  useNavigate, useParams } from 'react-router-dom';
 import './EditProduct.css';
-import {URL as url} from '../../constants';
 
 const EditProduct = () => {
   let { productID } = useParams();
@@ -29,7 +28,7 @@ const EditProduct = () => {
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    await axios.patch(`${url}/products/${id}`, user);
+    await axios.patch(`${process.env.url}/products/${id}`, user);
     history('/admin/products');
   };
 
