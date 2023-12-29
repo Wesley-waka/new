@@ -1,39 +1,39 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
-import { Switch, Route } from 'react-router-dom';
-import NavBar from './NavBar/NavBar';
-import Home from './Home/Home';
-import AboutUs from './AboutUs/AboutUs';
-import SignUp from './SignUp/SignUp';
-import Login from './Login/Login';
-import Patient from './Patient/Patient';
-import Practitioner from './Practitioner/Practitioner';
-import Shop from './Shop/Shop';
-import Footer from './Footer/Footer';
-import PatientCreateAppointment from './PatientCreateAppointment/PatientCreateAppointment';
-import PatientAppointments from './PatientAppointments/PatientAppointments';
-import PatientChat from './PatientChat/PatientChat';
-import PatientReviews from './PatientReviews/PatientReviews';
-import ProductPage from './ProductPage/ProductPage';
-import PractitionerCreateAppointment from './PractitionerCreateAppointment/PractitionerCreateAppointment';
-import PageNotFound from './PageNotFound/PageNotFound';
-import PractitionerAppointments from './PractitionerAppointments/PractitionerAppointments';
-import PractitionerChat from './PractitionerChat/PractitionerChat';
-import PractitionerReviews from './PractitionerReviews/PractitionerReviews';
-import Cart from './Cart/Cart';
-import PatientCalendar from './PatientCalendar/PatientCalendar';
-import PractitionerCalendar from './PractitionerCalendar/PractitionerCalendar';
-import Admin from './Admin/Admin';
-import AdminLogin from './AdminLogin/AdminLogin';
-import AddPractitioner from './AddPractitioner/AddPractitioner';
-import AddProduct from './AddProduct/AddProduct';
-import AllProducts from './AllProducts/AllProducts';
-import AllPractitioners from './AllPractitioners/AllPractitioners';
-import PatientDetailsPopup from './PatientDetailsPopup/PatientDetailsPopup';
-import ResetPassword from './ResetPassword/ResetPassword';
-import EditPractitioner from './Admin/EditPractitioner';
-import EditProduct from './Admin/EditProduct';
-import AddPractitionerProfile from './AddPractitioner/AddPractitionerProfile';
+import { Route,BrowserRouter as Switch,Routes, BrowserRouter } from 'react-router-dom';
+import NavBar from './components/Navbar/NavBar';
+import Home from './components/Home/Home';
+import AboutUs from './components/AboutUs/AboutUs';
+import SignUp from './components/SignUp/SignUp';
+import Login from './components/Login/Login';
+import Patient from './components/Patient/Patient';
+import Practitioner from './components/Practitioner/Practitioner';
+import Shop from './components/Shop/Shop';
+import Footer from './components/Footer/Footer';
+import PatientCreateAppointment from './components/PatientCreateAppointment/PatientCreateAppointment';
+import PatientAppointments from './components/PatientAppointments/PatientAppointments';
+import PatientChat from './components/PatientChat/PatientChat';
+import PatientReviews from './components/PatientReviews/PatientReviews';
+import ProductPage from './components/ProductPage/ProductPage';
+import PractitionerCreateAppointment from './components/PractitionerCreateAppointment/PractitionerCreateAppointment';
+import PageNotFound from './components/PageNotFound/PageNotFound';
+import PractitionerAppointments from './components/PractitionerAppointments/PractitionerAppointments';
+import PractitionerChat from './components/PractitionerChat/PractitionerChat';
+import PractitionerReviews from './components/PractitionerReviews/PractitionerReviews';
+import Cart from './components/Cart/Cart';
+import PatientCalendar from './components/PatientCalendar/PatientCalendar';
+import PractitionerCalendar from './components/PractitionerCalendar/PractitionerCalendar';
+import Admin from './components/Admin/Admin';
+import AdminLogin from './components/AdminLogin/AdminLogin';
+import AddPractitioner from './components/AddPractitioner/AddPractitioner';
+import AddProduct from './components/AddProduct/AddProduct';
+import AllProducts from './components/AllProducts/AllProducts';
+import AllPractitioners from './components/AllPractitioners/AllPractitioners';
+import PatientDetailsPopup from './components/PatientDetailsPopup/PatientDetailsPopup';
+import ResetPassword from './components/ResetPassword/ResetPassword';
+import EditPractitioner from './components/Admin/EditPractitioner';
+import EditProduct from './components/Admin/EditProduct';
+import AddPractitionerProfile from './components/AddPractitioner/AddPractitionerProfile';
 
 function App() {
   const [userAdmin, setUserAdmin] = useState(true);
@@ -173,7 +173,8 @@ function App() {
   // console.log(uniqueCategoryArray);
 
   return (
-    <div className="App">
+      <BrowserRouter>
+      <div className="App">
       <NavBar
         loggedIn={loggedIn}
         setLoggedIn={setLoggedIn}
@@ -185,79 +186,60 @@ function App() {
         // setUserPractitioner={setUserPractitioner}
         cartItems={cartItems}
       />
-      <Switch>
-        <Route exact path="/signup">
-          <SignUp
+      <Routes>
+        <Route exact path="/signup" element={<SignUp
             loggedIn={loggedIn}
             setLoggedIn={setLoggedIn}
             userType={userType}
             setUserType={setUserType}
             setCartItems={setCartItems}
-          />
+          />}>
         </Route>
-        <Route exact path="/login">
-          <Login
+        <Route exact path="/login" element={<Login
             loggedIn={loggedIn}
             setLoggedIn={setLoggedIn}
             userType={userType}
             setUserType={setUserType}
             setCartItems={setCartItems}
-          />
+          />}>
         </Route>
-        <Route exact path="/reset-password">
-          <ResetPassword loggedIn={loggedIn} userType={userType} />
+        <Route exact path="/reset-password" element={<ResetPassword loggedIn={loggedIn} userType={userType} />}>
         </Route>
         {/* == PATIENT ROUTES */}
-        <Route exact path="/patients/me">
-          <Patient loggedIn={loggedIn} userType={userType} />
+        <Route exact path="/patients/me" element={<Patient loggedIn={loggedIn} userType={userType} />}>
         </Route>
-        <Route exact path="/patients/me/create-appointment">
-          <PatientCreateAppointment loggedIn={loggedIn} userType={userType} />
+        <Route exact path="/patients/me/create-appointment" element={<PatientCreateAppointment loggedIn={loggedIn} userType={userType} />}>
         </Route>
-        <Route exact path="/patients/me/appointments">
-          <PatientAppointments loggedIn={loggedIn} userType={userType} />
+        <Route exact path="/patients/me/appointments" element={<PatientAppointments loggedIn={loggedIn} userType={userType} />}>
         </Route>
-        <Route exact path="/patients/me/chat">
-          <PatientChat loggedIn={loggedIn} userType={userType} />
+        <Route exact path="/patients/me/chat" element={<PatientChat loggedIn={loggedIn} userType={userType} />}>
         </Route>
-        <Route exact path="/patients/me/reviews">
-          <PatientReviews loggedIn={loggedIn} userType={userType} />
+        <Route exact path="/patients/me/reviews" element={<PatientReviews loggedIn={loggedIn} userType={userType} />}>
         </Route>
-        <Route exact path="/patients/me/calendar">
-          <PatientCalendar loggedIn={loggedIn} userType={userType} />
+        <Route exact path="/patients/me/calendar" element={<PatientCalendar loggedIn={loggedIn} userType={userType} />}>
         </Route>
-        <Route exact path="/patients/details-popup">
-          <PatientDetailsPopup loggedIn={loggedIn} userType={userType} />
+        <Route exact path="/patients/details-popup" element={<PatientDetailsPopup loggedIn={loggedIn} userType={userType} />}>
         </Route>
         {/* == PATIENT ROUTES */}
         {/* == PRACTITIONER ROUTES */}
-        <Route exact path="/practitioners/me">
-          <Practitioner loggedIn={loggedIn} userType={userType} />
+        <Route exact path="/practitioners/me" element={<Practitioner loggedIn={loggedIn} userType={userType} />}>
         </Route>
-        <Route exact path="/practitioners/me/create-appointment">
-          <PractitionerCreateAppointment
+        <Route exact path="/practitioners/me/create-appointment" element={<PractitionerCreateAppointment
             loggedIn={loggedIn}
             userType={userType}
-          />
+          />}>
         </Route>
-        <Route exact path="/practitioners/me/appointments">
-          <PractitionerAppointments loggedIn={loggedIn} userType={userType} />
+        <Route exact path="/practitioners/me/appointments" element={<PractitionerAppointments loggedIn={loggedIn} userType={userType} />}>
         </Route>
-        <Route exact path="/practitioners/me/chat">
-          <PractitionerChat loggedIn={loggedIn} userType={userType} />
+        <Route exact path="/practitioners/me/chat" element={<PractitionerChat loggedIn={loggedIn} userType={userType} />}>
         </Route>
-        <Route exact path="/practitioners/me/reviews">
-          <PractitionerReviews loggedIn={loggedIn} userType={userType} />
+        <Route exact path="/practitioners/me/reviews" element={<PractitionerReviews loggedIn={loggedIn} userType={userType} />}>
         </Route>
-        <Route exact path="/practitioners/me/calendar">
-          <PractitionerCalendar loggedIn={loggedIn} userType={userType} />
+        <Route exact path="/practitioners/me/calendar" element={<PractitionerCalendar loggedIn={loggedIn} userType={userType} />}>
         </Route>
-        overflow: ;{/* == PRACTITIONER ROUTES */}
-        <Route exact path="/about">
-          <AboutUs />
-        </Route>
-        <Route exact path="/products">
-          <Shop
+        {/* == PRACTITIONER ROUTES */}
+        <Route exact path="/about" element={<AboutUs />}></Route>
+        <Route exact path="/products" element={<Shop
             setCartSuccess={setCartSuccess}
             setCartWarming={setCartWarming}
             cartItems={cartItems}
@@ -273,11 +255,10 @@ function App() {
             sortDesc={sortDesc}
             sortProducts={sortProducts}
             setSortedProducts={setSortedProducts}
-          />
+          />}>
         </Route>
         {/* == BOTH PRACTITIONER & PATIENT Routes */}
-        <Route path={`/products/:productID`}>
-          {userType == "practitioner" || userType == "patient" ? (
+        <Route path={`/products/:productID`} element={userType == "practitioner" || userType == "patient" ? (
             <ProductPage
               handleAddToCart={handleAddToCart}
               productQuantity={productQuantity}
@@ -292,10 +273,9 @@ function App() {
             />
           ) : (
             ""
-          )}
+          )}>
         </Route>
-        <Route exact path="/cart">
-          {userType == "practitioner" || userType == "patient" ? (
+        <Route exact path="/cart" element={userType == "practitioner" || userType == "patient" ? (
             <Cart
               cart={cart}
               setCart={setCart}
@@ -312,26 +292,20 @@ function App() {
             />
           ) : (
             ""
-          )}
+          )}>
         </Route>
         {/* == BOTH PRACTITIONER & PATIENT Routes */}
         {/* == ADMIN ROUTES == */}
-        <Route exact path="/admin/practitioner/edit/:id">
-          <EditPractitioner loggedIn={loggedIn} userType={userType} />
-        </Route>
-        <Route exact path="/admin/product/edit/:id">
-          <EditProduct loggedIn={loggedIn} userType={userType} />
-        </Route>
-        <Route exact path="/admin/login">
-          <AdminLogin
+        <Route exact path="/admin/practitioner/edit/:id" element={<EditPractitioner loggedIn={loggedIn} userType={userType} />}></Route>
+        <Route exact path="/admin/product/edit/:id" element={<EditProduct loggedIn={loggedIn} userType={userType} />}></Route>
+        <Route exact path="/admin/login" element={<AdminLogin
             loggedIn={loggedIn}
             setLoggedIn={setLoggedIn}
             userType={userType}
             setUserType={setUserType}
-          />
+          />}>
         </Route>
-        <Route exact path="/admin/me">
-          {userAdmin ? (
+        <Route exact path="/admin/me" element={userAdmin ? (
             <Admin loggedIn={loggedIn} userType={userType} />
           ) : (
             <AdminLogin
@@ -339,10 +313,9 @@ function App() {
               loggedIn={loggedIn}
               userType={userType}
             />
-          )}
+          )}>
         </Route>
-        <Route exact path="/admin/all-practitioners">
-          {userAdmin ? (
+        <Route exact path="/admin/all-practitioners" element={userAdmin ? (
             <AllPractitioners loggedIn={loggedIn} userType={userType} />
           ) : (
             <AdminLogin
@@ -350,10 +323,9 @@ function App() {
               loggedIn={loggedIn}
               userType={userType}
             />
-          )}
+          )}>
         </Route>
-        <Route exact path="/admin/add-practitioner">
-          {userAdmin ? (
+        <Route exact path="/admin/add-practitioner" element={userAdmin ? (
             <AddPractitioner loggedIn={loggedIn} userType={userType} />
           ) : (
             <AdminLogin
@@ -361,10 +333,9 @@ function App() {
               loggedIn={loggedIn}
               userType={userType}
             />
-          )}
+          )}>
         </Route>
-        <Route exact path='/admin/add-practitioner-profile'>
-          {userAdmin ? (
+        <Route exact path='/admin/add-practitioner-profile' element={userAdmin ? (
             <AddPractitionerProfile loggedIn={loggedIn} userType={userType} />
           ) : (
             <AdminLogin
@@ -372,10 +343,9 @@ function App() {
               loggedIn={loggedIn}
               userType={userType}
             />
-          )}
+          )}>
         </Route>
-        <Route exact path='/admin/products'>
-          {userAdmin ? (
+        <Route exact path='/admin/products' element={userAdmin ? (
             <AllProducts
               loggedIn={loggedIn}
               userType={userType}
@@ -387,10 +357,9 @@ function App() {
               loggedIn={loggedIn}
               userType={userType}
             />
-          )}
+          )}>
         </Route>
-        <Route exact path="/admin/add-product">
-          {userAdmin ? (
+        <Route exact path="/admin/add-product" element={userAdmin ? (
             <AddProduct
               loggedIn={loggedIn}
               userType={userType}
@@ -402,18 +371,15 @@ function App() {
               loggedIn={loggedIn}
               userType={userType}
             />
-          )}
+          )}>
         </Route>
         {/* == ADMIN ROUTES == */}
-        <Route exact path="/">
-          <Home loggedIn={loggedIn} userType={userType} />
-        </Route>
-        <Route exact path="*">
-          <PageNotFound loggedIn={loggedIn} userType={userType} />
-        </Route>
-      </Switch>
+        <Route exact path="/" element={ <Home loggedIn={loggedIn} userType={userType} />}></Route>
+        <Route exact path="*" element={<PageNotFound loggedIn={loggedIn} userType={userType} />}></Route>
+        </Routes>
       <Footer />
     </div>
+      </BrowserRouter>
   );
 }
 
