@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import './AboutUs.css';
 import { Link } from 'react-router-dom';
 import AboutPracImg from '../../img/black-male-doc-with-tab.png';
 import teamImg1 from '../../img/front-view-nurse-wearing-stethoscope.jpg';
