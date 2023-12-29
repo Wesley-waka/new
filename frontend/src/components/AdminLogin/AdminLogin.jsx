@@ -2,7 +2,6 @@ import AdminSidebar from '../AdminSidebar/AdminSidebar';
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import {  useNavigate, useParams } from 'react-router-dom';
-import './EditProduct.css';
 
 const EditProduct = () => {
   let { productID } = useParams();
