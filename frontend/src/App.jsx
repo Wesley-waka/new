@@ -76,7 +76,7 @@ function App() {
     const fetchProducts = async () => {
       setLoading(true);
       // const response = await fetch('https://fakestoreapi.com/products');
-      const response = await fetch('http://127.0.0.1:3000/products');
+      const response = await fetch('/products');
       const results = await response.json();
 
       // Sort Products Logic on shop page
@@ -161,7 +161,7 @@ function App() {
 
   // Get & Store all product categories
   useEffect(() => {
-    fetch(`http://127.0.0.1:3000/products`)
+    fetch(`/products`)
       .then((res) => res.json())
       .then((data) => {
         data.map((d) => productCategories.push(d.category));
@@ -208,35 +208,23 @@ function App() {
         {/* == PATIENT ROUTES */}
         <Route exact path="/patients/me" element={<Patient loggedIn={loggedIn} userType={userType} />}>
         </Route>
-        <Route exact path="/patients/me/create-appointment" element={<PatientCreateAppointment loggedIn={loggedIn} userType={userType} />}>
-        </Route>
-        <Route exact path="/patients/me/appointments" element={<PatientAppointments loggedIn={loggedIn} userType={userType} />}>
-        </Route>
-        <Route exact path="/patients/me/chat" element={<PatientChat loggedIn={loggedIn} userType={userType} />}>
-        </Route>
-        <Route exact path="/patients/me/reviews" element={<PatientReviews loggedIn={loggedIn} userType={userType} />}>
-        </Route>
-        <Route exact path="/patients/me/calendar" element={<PatientCalendar loggedIn={loggedIn} userType={userType} />}>
-        </Route>
-        <Route exact path="/patients/details-popup" element={<PatientDetailsPopup loggedIn={loggedIn} userType={userType} />}>
-        </Route>
+        <Route exact path="/patients/me/create-appointment" element={<PatientCreateAppointment loggedIn={loggedIn} userType={userType} />}></Route>
+        <Route exact path="/patients/me/appointments" element={<PatientAppointments loggedIn={loggedIn} userType={userType} />}></Route>
+        <Route exact path="/patients/me/chat" element={<PatientChat loggedIn={loggedIn} userType={userType} />}></Route>
+        <Route exact path="/patients/me/reviews" element={<PatientReviews loggedIn={loggedIn} userType={userType} />}></Route>
+        <Route exact path="/patients/me/calendar" element={<PatientCalendar loggedIn={loggedIn} userType={userType} />}></Route>
+        <Route exact path="/patients/details-popup" element={<PatientDetailsPopup loggedIn={loggedIn} userType={userType} />}></Route>
         {/* == PATIENT ROUTES */}
         {/* == PRACTITIONER ROUTES */}
-        <Route exact path="/practitioners/me" element={<Practitioner loggedIn={loggedIn} userType={userType} />}>
-        </Route>
+        <Route exact path="/practitioners/me" element={<Practitioner loggedIn={loggedIn} userType={userType} />}></Route>
         <Route exact path="/practitioners/me/create-appointment" element={<PractitionerCreateAppointment
             loggedIn={loggedIn}
             userType={userType}
-          />}>
-        </Route>
-        <Route exact path="/practitioners/me/appointments" element={<PractitionerAppointments loggedIn={loggedIn} userType={userType} />}>
-        </Route>
-        <Route exact path="/practitioners/me/chat" element={<PractitionerChat loggedIn={loggedIn} userType={userType} />}>
-        </Route>
-        <Route exact path="/practitioners/me/reviews" element={<PractitionerReviews loggedIn={loggedIn} userType={userType} />}>
-        </Route>
-        <Route exact path="/practitioners/me/calendar" element={<PractitionerCalendar loggedIn={loggedIn} userType={userType} />}>
-        </Route>
+          />}></Route>
+        <Route exact path="/practitioners/me/appointments" element={<PractitionerAppointments loggedIn={loggedIn} userType={userType} />}></Route>
+        <Route exact path="/practitioners/me/chat" element={<PractitionerChat loggedIn={loggedIn} userType={userType} />}></Route>
+        <Route exact path="/practitioners/me/reviews" element={<PractitionerReviews loggedIn={loggedIn} userType={userType} />}></Route>
+        <Route exact path="/practitioners/me/calendar" element={<PractitionerCalendar loggedIn={loggedIn} userType={userType} />}></Route>
         {/* == PRACTITIONER ROUTES */}
         <Route exact path="/about" element={<AboutUs />}></Route>
         <Route exact path="/products" element={<Shop
