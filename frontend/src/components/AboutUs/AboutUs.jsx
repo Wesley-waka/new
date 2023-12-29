@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import AboutPracImg from '../../img/black-male-doc-with-tab.png';
 import teamImg1 from '../../img/front-view-nurse-wearing-stethoscope.jpg';
 import practitionerProfilesFromFile from '../../assets/PractitionerProfileData'
-import {URL as url} from '../../constants';
 
 function AboutUs() {
   const [practitioners, setPractitioners] = useState([]);
