@@ -11,7 +11,7 @@ function AboutUs() {
   // console.log(practitioners);
 
   useEffect(() => {
-    fetch(`${url}/practitioner_profiles`)
+    fetch(`${process.env.url}/practitioner_profiles`)
       .then((response) => response.json())
       .then((d) => setPractitioners(d));
   }, []);
