@@ -73,7 +73,7 @@ Visit http://localhost:3000 in your browser to access the FurnitureCommerce webs
   User Account:
         Create an account to manage orders, save favorite items, and track your purchase history.
 
-Technologies Used
+### Technologies Used
 
     React.js
     Ruby
@@ -82,7 +82,7 @@ Technologies Used
     Tailwind CSS
     JWT Authentication
 
-Contributing
+### Contributing
 
 This project is licensed under the MIT License.
 
