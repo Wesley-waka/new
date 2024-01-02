@@ -99,7 +99,7 @@ function NavBar({ loggedIn, setLoggedIn, userType, setUserType, cartItems }) {
             </NavLink>
             {loggedIn && userType == 'patient' ? (
               <>
-                <NavLink exact to='/patients/me'>
+                <NavLink exact to='/patients/me/details'>
                   Dashboard
                 </NavLink>
                 <NavLink exact to='/products'>

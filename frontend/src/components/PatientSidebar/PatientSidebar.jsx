@@ -7,7 +7,7 @@ function PatientSidebar({loggedIn, userType}) {
   return (
     <div className='patient-sidebar-nav-container'>
       <nav className='patient-sidebar-nav'>
-        <NavLink exact to='/patients/me'>
+        <NavLink exact to='/patients/me/details'>
           <i className='fa-solid fa-user'></i>&nbsp; Personal details
         </NavLink>
         <NavLink exact to='/patients/me/create-appointment'>

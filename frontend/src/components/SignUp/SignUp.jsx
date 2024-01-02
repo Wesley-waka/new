@@ -40,7 +40,7 @@ function SignUp({ loggedIn, setLoggedIn, userType, setUserType, setCartItems }) 
 
   function handleSignupSubmit(e) {
     e.preventDefault();
-    fetch(`/signup`, {
+    fetch(`http://127.0.0.1:3000/signup`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

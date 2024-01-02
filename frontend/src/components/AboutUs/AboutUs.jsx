@@ -10,7 +10,7 @@ function AboutUs() {
   // console.log(practitioners);
 
   useEffect(() => {
-    fetch(`${process.env.url}/practitioner_profiles`)
+    fetch(`http://localhost:5173/practitioner_profiles`)
       .then((response) => response.json())
       .then((d) => setPractitioners(d));
   }, []);
@@ -187,7 +187,7 @@ function AboutUs() {
             patient confidentiality by keeping all records private
           </p>
           <br />
-          <Link to='/patients/me'>
+          <Link to='/patients/me/details'>
             <button type='button'>Book Appointment</button>
           </Link>
         </div>

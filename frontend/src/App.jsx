@@ -76,8 +76,9 @@ function App() {
     const fetchProducts = async () => {
       setLoading(true);
       // const response = await fetch('https://fakestoreapi.com/products');
-      const response = await fetch('/products');
+      const response = await fetch('http://127.0.0.1:3000/products');
       const results = await response.json();
+      console.log(results)
 
       // Sort Products Logic on shop page
       sortProducts === 'price-asc'
@@ -113,7 +114,9 @@ function App() {
     return products;
   };
 
+  console.log(cart)
   const handleAddToCart = (item) => {
+    console.log(item)
     // CHECK IF ITEM EXISTS IN CART
     let exist = false;
     cart.forEach((product) => {
@@ -124,16 +127,20 @@ function App() {
           setCartWarming(false);
         }, 3500);
       }
+      console.log(product)
     });
     if (!exist) {
-      cart.unshift(item);
-      setCartCount(cart.length);
-      setCartSuccess(true);
+      // cart.unshift(item);
+      // setCartCount(cart.length);
+      // setCartSuccess(true);
+      console.log(item)
       setTimeout(() => {
         setCartSuccess(false);
       }, 3500);
     }
   };
+
+  console.log(cartItems)
 
   // // Quantity Add Button on Product Page
   function handleAddQty(product) {
@@ -206,7 +213,7 @@ function App() {
         <Route exact path="/reset-password" element={<ResetPassword loggedIn={loggedIn} userType={userType} />}>
         </Route>
         {/* == PATIENT ROUTES */}
-        <Route exact path="/patients/me" element={<Patient loggedIn={loggedIn} userType={userType} />}>
+        <Route exact path="/patients/me/details" element={<Patient loggedIn={loggedIn} userType={userType} />}>
         </Route>
         <Route exact path="/patients/me/create-appointment" element={<PatientCreateAppointment loggedIn={loggedIn} userType={userType} />}></Route>
         <Route exact path="/patients/me/appointments" element={<PatientAppointments loggedIn={loggedIn} userType={userType} />}></Route>

@@ -59,7 +59,6 @@ function Shop({
   function handleAddToCart(product) {
     const productId = product.id
     const orderId = cartItems[0].order_id
-
     fetch('http://127.0.0.1:3000/shopping_carts', {
       method: 'POST',
       headers: {
