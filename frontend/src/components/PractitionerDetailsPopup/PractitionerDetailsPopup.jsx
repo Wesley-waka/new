@@ -26,7 +26,7 @@ function PractitionerDetailsPopup({ loggedIn, userType, modalOpen, setModalOpen,
 
   function updatePersonProfile(profileId) {
     console.log("person details: ", personDetails)
-    fetch(`${url}/practitioner_profiles/${profileId}`, {
+    fetch(`https://new-back.fly.dev/practitioner_profiles/${profileId}`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',
@@ -51,7 +51,7 @@ function PractitionerDetailsPopup({ loggedIn, userType, modalOpen, setModalOpen,
   }
 
   function addNewProfile(personId) {
-    fetch(`${url}/practitioner_profiles`, {
+    fetch(`https://new-back.fly.dev/practitioner_profiles`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

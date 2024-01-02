@@ -32,7 +32,7 @@ function ProductPage({
     e.preventDefault();
     console.log(rating, header, content, productID, userId);
 
-    fetch("http://127.0.0.1:3000/reviews", {
+    fetch("https://new-back.fly.dev/reviews", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -55,10 +55,10 @@ function ProductPage({
     const fetchProduct = async () => {
       setProductLoading(true);
       const response = await fetch(
-        `http://127.0.0.1:3000/products/${productID}`
+        `https://new-back.fly.dev/products/${productID}`
       );
       const res = await fetch(
-        `http://127.0.0.1:3000/products/${productID}/average_rating`
+        `https://new-back.fly.dev/products/${productID}/average_rating`
       );
       let res1 = await res.json();
       const results = await response.json();

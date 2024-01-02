@@ -27,7 +27,7 @@ function PatientCreateAppointment({ loggedIn, userType }) {
   }
 
   useEffect(() => {
-    fetch("http://127.0.0.1:3000/practitioners", {
+    fetch("https://new-back.fly.dev/practitioners", {
       method: 'GET',
       headers: {
         "Accept": "application/json",
@@ -49,7 +49,7 @@ function PatientCreateAppointment({ loggedIn, userType }) {
   function handleSubmitAppoitmentRequest(e) {
     e.preventDefault()
 
-    fetch("http://127.0.0.1:3000/appointments", {
+    fetch("https://new-back.fly.dev/appointments", {
       method: 'POST',
       headers: {
         "Accept": "application/json",

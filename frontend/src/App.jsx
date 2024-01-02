@@ -76,7 +76,7 @@ function App() {
     const fetchProducts = async () => {
       setLoading(true);
       // const response = await fetch('https://fakestoreapi.com/products');
-      const response = await fetch('http://127.0.0.1:3000/products');
+      const response = await fetch('https://new-back.fly.dev/products');
       const results = await response.json();
       console.log(results)
 
@@ -168,7 +168,7 @@ function App() {
 
   // Get & Store all product categories
   useEffect(() => {
-    fetch(`/products`)
+    fetch(`https://new-back.fly.dev/products`)
       .then((res) => res.json())
       .then((data) => {
         data.map((d) => productCategories.push(d.category));

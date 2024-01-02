@@ -75,7 +75,7 @@ function Cart({
   // })
 
   const handlePostToCart = (item) => {
-    fetch('http://127.0.0.1:3000/shopping_carts', {
+    fetch('https://new-back.fly.dev/shopping_carts', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({}),
@@ -84,7 +84,7 @@ function Cart({
 
   const handleDeleteFromCart = (item) => {
     fetch(
-      `http://127.0.0.1:3000/shopping_carts/${item.id}`,
+      `https://new-back.fly.dev/shopping_carts/${item.id}`,
       {
         method: 'DELETE',
       }
@@ -126,7 +126,7 @@ function Cart({
 
   function updateDatabaseQty(cartId, newQuantity) {
     fetch(
-      `http://127.0.0.1:3000/shopping_carts/${cartId}`,
+      `https://new-back.fly.dev/shopping_carts/${cartId}`,
       {
         method: 'PATCH',
         headers: {
@@ -175,7 +175,7 @@ function Cart({
     const deletedCartItem = product.cart_id;
 
     fetch(
-      `http://127.0.0.1:3000/shopping_carts/${deletedCartItem}`,
+      `https://new-back.fly.dev/shopping_carts/${deletedCartItem}`,
       {
         method: 'DELETE',
         headers: { Authorization: localStorage.getItem('token') },

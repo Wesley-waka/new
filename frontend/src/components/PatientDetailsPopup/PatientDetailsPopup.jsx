@@ -24,7 +24,7 @@ function PatientDetailsPopup({ loggedIn, userType, modalOpen, setModalOpen, pers
   }
 
   function updatePersonProfile(profileId) {
-    fetch(`http://127.0.0.1:3000/patient_profiles/${profileId}`, {
+    fetch(`https://new-back.fly.dev/patient_profiles/${profileId}`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',
@@ -48,7 +48,7 @@ function PatientDetailsPopup({ loggedIn, userType, modalOpen, setModalOpen, pers
   }
 
   function addNewProfile(personId) {
-    fetch(`http://127.0.0.1:3000/patient_profiles`, {
+    fetch(`https://new-back.fly.dev/patient_profiles`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

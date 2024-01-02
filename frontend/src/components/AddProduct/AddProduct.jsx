@@ -17,7 +17,7 @@ const AddProduct = ({ uniqueCategoryArray }) => {
 
   // Storing all categories in array
   useEffect(() => {
-    fetch(`${process.env.url}/products`)
+    fetch(`https://new-back.fly.dev/products`)
       .then((res) => res.json())
       .then((data) => {
         data.map((d) => categories.push(d.category));
@@ -33,7 +33,7 @@ const AddProduct = ({ uniqueCategoryArray }) => {
 
   const handleAddProduct = (e) => {
     e.preventDefault();
-    fetch(`${process.env.url}/admins/${adminId}/products`, {
+    fetch(`https://new-back.fly.dev/admins/${adminId}/products`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', Authorization: token },
       body: JSON.stringify({

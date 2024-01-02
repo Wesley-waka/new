@@ -70,7 +70,7 @@ const AllPractitioners = ({ loggedIn, userType }) => {
   // Handle Delete Practitioner
   const handleDeletePractitioner = (deletedPrac) => {
     fetch(
-      `/practitioner_profiles/${deletedPrac.id}`,
+      `https://new-back.fly.dev/practitioner_profiles/${deletedPrac.id}`,
       {
         method: 'DELETE',
         headers: {

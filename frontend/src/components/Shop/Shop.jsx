@@ -42,7 +42,7 @@ function Shop({
   function searchResult(e) {
     e.preventDefault();
     console.log(query);
-    fetch("http://127.0.0.1:3000/productSearch", {
+    fetch("https://new-back.fly.dev/productSearch", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -59,7 +59,7 @@ function Shop({
   function handleAddToCart(product) {
     const productId = product.id
     const orderId = cartItems[0].order_id
-    fetch('http://127.0.0.1:3000/shopping_carts', {
+    fetch('https://new-back.fly.dev/shopping_carts', {
       method: 'POST',
       headers: {
         "Content-Type": 'application/json',

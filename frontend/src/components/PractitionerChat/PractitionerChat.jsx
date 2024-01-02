@@ -23,7 +23,7 @@ function PractitionerChat({ loggedIn, userType }) {
 
   function updateAppointments() {
     const token = localStorage.getItem("token")
-    const appointmentsApiEndpoint = `${url}/practitioners/${personId}/appointments`
+    const appointmentsApiEndpoint = `https://new-back.fly.dev/practitioners/${personId}/appointments`
 
     fetch(appointmentsApiEndpoint, {
       headers: {
@@ -68,7 +68,7 @@ function PractitionerChat({ loggedIn, userType }) {
       content: message
     }
 
-    fetch('http://127.0.0.1:3000/messages', {
+    fetch('https://new-back.fly.dev/messages', {
       method: 'POST',
       headers: {
         'Accept': 'application/json',

@@ -9,7 +9,7 @@ function AboutUs() {
   // console.log(practitioners);
 
   useEffect(() => {
-    fetch(`${process.env.url}/practitioner_profiles`)
+    fetch(`https://new-back.fly.dev/practitioner_profiles`)
       .then((response) => response.json())
       .then((d) => setPractitioners(d));
   }, []);

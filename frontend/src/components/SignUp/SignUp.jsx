@@ -23,7 +23,7 @@ function SignUp({ loggedIn, setLoggedIn, userType, setUserType, setCartItems }) 
   }
 
   function getAndStoreCartData(patientId){
-    fetch(`http://127.0.0.1:3000/users/${patientId}/cart`, {
+    fetch(`https://new-back.fly.dev/users/${patientId}/cart`, {
       headers: {"Accept": "application/json", "Authorization": localStorage.getItem("token")}
     })
     .then(res => {
@@ -40,7 +40,7 @@ function SignUp({ loggedIn, setLoggedIn, userType, setUserType, setCartItems }) 
 
   function handleSignupSubmit(e) {
     e.preventDefault();
-    fetch(`http://127.0.0.1:3000/signup`, {
+    fetch(`https://new-back.fly.dev/signup`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

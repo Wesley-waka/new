@@ -22,7 +22,7 @@ function PractitionerCreateAppointment({ loggedIn, userType }) {
   }
 
   useEffect(() => {
-    fetch(`${url}/patient_profiles`, {
+    fetch(`https://new-back.fly.dev/patient_profiles`, {
       headers: { "Accept": "application/json", "Authorization": localStorage.getItem("token") }
     })
       .then((response) => {

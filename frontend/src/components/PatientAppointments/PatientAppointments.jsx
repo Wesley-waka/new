@@ -6,7 +6,7 @@ import {  useNavigate } from 'react-router-dom';
 function PatientAppointments({ loggedIn, userType }) {
   const token = localStorage.getItem("token")
   const personId = JSON.parse(localStorage.getItem("person") || false)?.id
-  const appointmentsApiEndpoint = `http://127.0.0.1:3000/users/${personId}/appointments`
+  const appointmentsApiEndpoint = `https://new-back.fly.dev/users/${personId}/appointments`
   const [appointments, setAppointments] = useState(
     JSON.parse(localStorage.getItem("person") || false)?.appointments || []
   )

@@ -214,7 +214,7 @@ function PatientReviews({ loggedIn, userType }) {
                       <i
                         class='fa-solid fa-trash'
                         onClick={(e) => {
-                          fetch(`/reviews/${review.id}`, {
+                          fetch(`https://new-back.fly.dev/reviews/${review.id}`, {
                             method: 'DELETE',
                           });
                         }}

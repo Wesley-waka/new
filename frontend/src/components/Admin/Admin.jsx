@@ -29,11 +29,11 @@ const AllPractitioners = ({ loggedIn, userType }) => {
 
   // Fetches all practitioners & Products
   useEffect(() => {
-    fetch(`${process.env.url}/practitioner_profiles`)
+    fetch(`https://new-back.fly.dev/practitioner_profiles`)
       .then((r) => r.json())
       .then((d) => setPracs(d));
 
-    fetch(`${process.env.url}/products`)
+    fetch(`https://new-back.fly.dev/products`)
       .then((r) => r.json())
       .then((d) => setProducts(d));
   }, []);

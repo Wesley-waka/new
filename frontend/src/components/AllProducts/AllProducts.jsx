@@ -66,7 +66,7 @@ const AllProducts = ({ loggedIn, userType }) => {
 
   // Handle Delete Product
   const handleDeleteProduct = (deletedProduct) => {
-    fetch(`/admins/${adminId}/products/${deletedProduct.id}`, {
+    fetch(`https://new-back.fly.dev/admins/${adminId}/products/${deletedProduct.id}`, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',

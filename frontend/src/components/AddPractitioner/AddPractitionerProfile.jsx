@@ -26,13 +26,13 @@ function AddPractitionerProfile() {
 
   // Fetch selected practitioner's profile
   useEffect(() => {
-    fetch(`${process.env.url}/practitioners`, {
+    fetch(`https://new-back.fly.dev/practitioners`, {
       headers: { Authorization: token },
     })
       .then((r) => r.json())
       .then((d) => setPractitioners(d));
 
-    fetch(`${process.env.url}/practitioners/${practitionerID}`, {
+    fetch(`https://new-back.fly.dev/practitioners/${practitionerID}`, {
       headers: { Authorization: token },
     })
       .then((r) => r.json())
@@ -43,7 +43,7 @@ function AddPractitionerProfile() {
   // Handles Practitioner Profile data
   const handleFillProfileDetails = (e) => {
     e.preventDefault()
-    fetch(`${process.env.url}/practitioner_profiles`, {
+    fetch(`https://new-back.fly.dev/practitioner_profiles`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', Authorization: token },
       body: JSON.stringify({
