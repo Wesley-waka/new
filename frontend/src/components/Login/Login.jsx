@@ -15,7 +15,7 @@ function Login({ loggedIn, setLoggedIn, userType, setUserType, setCartItems }) {
 
   if (loggedIn) {
     if (userType == "patient") {
-      history("/patients/me");
+      history("/patients/me/details");
     } else if (userType == "practitioner") {
       history("/practitioners/me");
     } else if (userType == "admin") {
@@ -77,7 +77,7 @@ function Login({ loggedIn, setLoggedIn, userType, setUserType, setCartItems }) {
             localStorage.setItem("person", JSON.stringify(person.user));
             setLoggedIn(true);
             setUserType("patient");
-            history("/patients/me");
+            history("/patients/me/details");
           }
         });
       } else {

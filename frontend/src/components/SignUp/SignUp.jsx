@@ -14,7 +14,7 @@ function SignUp({ loggedIn, setLoggedIn, userType, setUserType, setCartItems }) 
 
   if (loggedIn) {
     if (userType == 'patient') {
-      history('/patients/me');
+      history('/patients/me/details');
     } else if (userType == 'practitioner') {
       history('/practitioners/me');
     } else if (userType == 'admin') {
@@ -60,13 +60,13 @@ function SignUp({ loggedIn, setLoggedIn, userType, setUserType, setCartItems }) 
             localStorage.setItem('person', JSON.stringify(person.practitioner));
             setLoggedIn(true);
             setUserType('practitioner');
-            history.push('/practitioners/me');
+            history.push('/practitioners/me/details');
           } else {
             localStorage.setItem('person', JSON.stringify(person.user));
             getAndStoreCartData(person.user.id)
             setLoggedIn(true);
             setUserType('patient');
-            history.push('/patients/me');
+            history.push('/patients/me/details');
           }
         });
       } else {
