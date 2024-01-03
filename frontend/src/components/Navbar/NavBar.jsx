@@ -19,10 +19,10 @@ function NavBar({ loggedIn, setLoggedIn, userType, setUserType, cartItems }) {
 
     const logoutEndpoint =
       userType == 'patient'
-        ? 'http://127.0.0.1:3000/logout'
+        ? 'https://new-back.fly.dev/logout'
         : userType == 'practitioner'
-          ? 'http://127.0.0.1:3000/logout'
-          : 'http://127.0.0.1:3000/logout';
+          ? 'https://new-back.fly.dev/logout'
+          : 'https://new-back.fly.dev/logout';
 
     fetch(logoutEndpoint, {
       method: 'DELETE',

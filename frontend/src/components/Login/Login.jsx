@@ -9,8 +9,8 @@ function Login({ loggedIn, setLoggedIn, userType, setUserType, setCartItems }) {
     prac_checkbox: false,
   });
   const [error, setError] = useState("");
-  const patientLoginLink = "http://127.0.0.1:3000/login";
-  const practitionerLoginLink = "http://127.0.0.1:3000/practitioner/login";
+  const patientLoginLink = "https://new-back.fly.dev/login";
+  const practitionerLoginLink = "https://new-back.fly.dev/practitioner/login";
   const history = useNavigate();
 
   if (loggedIn) {

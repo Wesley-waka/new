@@ -9,7 +9,7 @@ function PractitionerAppointments({ loggedIn, userType }) {
   // =========================
   const token = localStorage.getItem('token');
   const personId = JSON.parse(localStorage.getItem('person') || false)?.id;
-  const appointmentsApiEndpoint = `${url}/practitioners/${personId}/appointments`;
+  const appointmentsApiEndpoint = `https://new-back.fly.dev/practitioners/${personId}/appointments`;
   const [appointments, setAppointments] = useState(
     JSON.parse(localStorage.getItem('person') || false)?.appointments || []
   );

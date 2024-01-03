@@ -53,7 +53,7 @@ function PatientAppointments({ loggedIn, userType }) {
   }, [])
 
   function handleDeleteAppointment(deletedAppointment) {
-    fetch(`http://127.0.0.1:3000/appointments/${deletedAppointment.id}`, {
+    fetch(`https://new-back.fly.dev/appointments/${deletedAppointment.id}`, {
       method: 'DELETE',
       headers: {
         "Accept": "application/json",
